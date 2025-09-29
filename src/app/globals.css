@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+
+
+html { scroll-behavior: smooth; }
+
+
+/* Simple container utility */
+.container { @apply mx-auto max-w-6xl px-4; }
+
+:root {
+  --brand: 169, 50%, 35%;
+  --gold: #D1B000;
+}
+
+@theme inline {
+  --color-brand: hsl(var(--brand));
+  --color-brand-light: hsl(169, 80, 45);
+  --color-brand-gold: var(--gold);
+}
+
+header .list {
+color: var(--gold);
+font-weight: bold;
+}
+
+/* #menu {
+  position: relative;
+  padding: 6rem 1.5rem;
+  color: white;
+  background: hsl(var(--gold));
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+} */
+/* #menu, #about {
+background: rgba(42, 123, 155, 0.1);
+background: linear-gradient(145deg, rgba(42, 123, 155, 0.15) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 88%);
+} */
+
+
+/* @import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+} */
