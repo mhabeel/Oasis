@@ -1,12 +1,13 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { Reem_Kufi, Cairo } from "next/font/google";
 
 const SITE_NAME = "Oasis – Mediterranean Restaurant";
 const SITE_URL = "https://www.example.com"; // TODO: change to your domain
 const SITE_DESCRIPTION = "Authentic Mediterranean cuisine in Luxembourg: salads, tajin, and crafted drinks.";
 
 export const viewport: Viewport = {
-  themeColor: "#f59e0b", // amber-500
+  themeColor: "#D4AF37", // amber-500
 };
 
 export const metadata: Metadata = {
@@ -39,10 +40,23 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
 };
+const heading = Reem_Kufi({
+  subsets: ["latin","latin-ext","arabic"],
+  weight: ["500", "600", "700"],
+  display: "swap",
+  variable: "--font-heading",
+});
+
+const body = Cairo({
+  subsets: ["latin", "arabic"],
+  weight: ["300", "400", "500", "600"],
+  display: "swap",
+  variable: "--font-sans",
+});
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${heading.variable} ${body.variable}`}>
       <body className="min-h-screen bg-white text-zinc-900 antialiased">{children}</body>
     </html>
   );

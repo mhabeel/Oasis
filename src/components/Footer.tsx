@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="border-t bg-zinc-50">
+    <footer className="border-4 border-majestic-gold bg-dark-gold">
       <div className="container py-12 grid gap-8 md:grid-cols-3">
         <div>
           <h3 className="font-semibold">Oasis</h3>
@@ -27,7 +27,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="border-t">
+      <div className="border-t-2 border-majestic-gold">
         <div className="container py-4 text-sm text-zinc-600">© {new Date().getFullYear()} Oasis. All rights reserved.</div>
       </div>
     </footer>

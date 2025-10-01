@@ -1,6 +1,6 @@
-export default function () {
+export default function Contact() {
   return (
-    <section id="contact" className="container py-16">
+    <section id="contact" className="mx-auto shadow-xl mt-2 mb-2 border-4 border-majestic-gold px-4 bg-dark-gold py-16">
       <h2 className="text-3xl font-semibold">Contact</h2>
       <p className="mt-2 text-zinc-600">
         For reservations or takeaway orders, call us or message on

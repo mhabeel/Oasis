@@ -4,6 +4,7 @@ import Menu from "@/components/Menu";
 import Footer from "@/components/Footer";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import ShopTeaser from "@/components/ShopTeaser";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -27,7 +28,7 @@ export default function Page() {
       <Header />
 
       <About />
-
+      <ShopTeaser />
       <Menu />
 
       <Contact />

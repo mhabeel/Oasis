@@ -1,13 +1,16 @@
+import Image from "next/image";
+
 export default function About() {
   return (
     <section
       id="about"
-      className="bg-gradient-to-b from-amber-50 to-white border-b"
+      className="bg-gradient-to-b from-dark-gold-2 to-white shadow-lg mb-1"
     >
-      <div className="container py-16 grid gap-6 md:grid-cols-2 items-center">
-        <div>
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">
-            Oasis
+      <div className="container py-16 flex flex-col md:flex-row items-center gap-6">
+        {/* Left side: text content */}
+        <div className="flex-1">
+          <h1 className="text-2xl font-bold font-heading tracking-tight text-brand-b">
+            OASIS & DÉLICES
           </h1>
           <p className="mt-4 text-lg text-zinc-600">
             Experience authentic Mediterranean flavors: fresh salads,
@@ -15,15 +18,22 @@ export default function About() {
           </p>
           <a
             href="#menu"
-            className="inline-block mt-6 rounded-xl bg-amber-600 px-6 py-3 text-white font-medium shadow hover:bg-amber-700"
+            className="inline-block mt-6 rounded-xl bg-majestic-gold px-6 py-3 text-brand-b font-medium shadow hover:bg-dark-gold-2 hover:text-majestic-gold"
           >
             View Menu
           </a>
         </div>
-        <div className="justify-self-center">
-          <div className="size-48 md:size-56 rounded-full bg-amber-200/50 grid place-items-center">
-            <span className="text-2xl">🥗 🍲 🥤</span>
-          </div>
+
+        {/* Right side: logo */}
+        <div className="flex-1 flex justify-center">
+          <Image
+            src="/images/logo.svg"   // put your logo inside /public/images
+            alt="Oasis Logo"
+            width={300}
+            height={300}
+            className="max-h-70 w-auto object-contain"
+            priority
+          />
         </div>
       </div>
     </section>

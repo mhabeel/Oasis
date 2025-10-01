@@ -9,21 +9,42 @@ html { scroll-behavior: smooth; }
 .container { @apply mx-auto max-w-6xl px-4; }
 
 :root {
-  --brand: 169, 50%, 35%;
-  --gold: #D1B000;
+  --brand: 97, 26%, 37%;
+  --brand-b: #4c7037;
+  --gold: 43, 89%, 37%;
+  --gold-light: 51, 100%, 41%, 0.2;
+  --dark-gold: #8a7b4d;
+  --dark-gold-2: #9e8a4d;
+  --majestic-gold: #D4AF37;
 }
 
 @theme inline {
   --color-brand: hsl(var(--brand));
-  --color-brand-light: hsl(169, 80, 45);
+  --color-brand-b: var(--brand-b);
+  --color-brand-light: hsl(169, 80, 45, 0.2);
   --color-brand-gold: var(--gold);
+  --color-brand-gold-light: var(--gold-light);
+  --color-dark-gold: var(--dark-gold);
+  --color-dark-gold-2: var(--dark-gold-2);
+  --color-majestic-gold: var(--majestic-gold);
+  --font-sans: var(--font-sans);         /* body font from next/font */
+  --font-heading: var(--font-heading);   /* heading font from next/font */
 }
 
 header .list {
-color: var(--gold);
+ color: var(--brand-b) ;
+ 
+/* color: hsl(var(--gold)); */
 font-weight: bold;
 }
+/* Force a reusable class that maps to the next/font variable */
+.font-heading {
+  font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif !important;
+}
 
+header .list{@apply hover:border-2 hover:border-dark-gold-2 hover:bg-majestic-gold;}
+body { @apply font-heading bg-majestic-gold/30; }
+h1, h2, h3, h4 { font-family: var(--font-heading), ui-sans-serif, system-ui; } 
 /* #menu {
   position: relative;
   padding: 6rem 1.5rem;
