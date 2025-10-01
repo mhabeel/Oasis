@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useMemo, useState } from "react";
 import { PRODUCTS } from "@/lib/products";
 
-const WHATSAPP_NUMBER = "+352123456789"; // TODO: set your full international number, no spaces
+const WHATSAPP_NUMBER = "+352691163971"; // TODO: set your full international number, no spaces
 
 export default function ShopPage() {
   const [name, setName] = useState("");
